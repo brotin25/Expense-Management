@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>ADD EXPENSE</title>
+	<link rel = "stylesheet" type = "text/class" href = "css\style.css">
+		
+<style>
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  
+  color: black;
+  text-align: center;
+}
+	Body{
+		font-family: 'Tangerine', serif;
+        font-size: 12px;
+        background-color: white;
+        margin :0;
+	}
+	
+	button{
+		background-color: blue;
+		width : 100%;
+		color: white;
+		padding : 15px;
+		margin : 10px 0px;
+		border-radius: 25px;
+		border: none;
+		
+	}
+	form {
+		border: 3px solid #f1f1f1;   
+	}
+	 input[type=text], input[type=password] {   
+        width: 100%;   
+        margin: 8px 0;  
+        padding: 12px 20px;   
+        display: inline-block;   
+        border: 2px ;   
+        box-sizing: border-box;
+        border-radius: 25px;
+    
+    }  
+
+  .newregistrationbtn {   
+        width: auto;   
+        padding: 10px 18px;  
+        margin: 10px 5px;  
+    }   
+        
+     
+ .container {   
+        padding: 25px;   
+        background-color: lightblue;
+        
+         
+    }   
+        
+    table{
+    background-color:  lightblue;
+    
+    }
+    
+    
+</style>
+</head>
+<body style="background-color:#2DCDDF;">
+<body>
+	<div id="header">
+
+	<center><h1>Expense Management System</style></h1></center>
+
+	</div>
+
+	<div style="text-align:center; height: 460px; width: 500px;
+
+	margin-left: auto; margin-right: auto; color: black;">
+	 
+	 <center> <h1> Add Expense  </h1> </center>   
+    <form action = "AddExpenseServlet" method = "post" name="addexpense-form" onsubmit="return validateExpense()">  
+        <div class="container"> 
+            <label><b>Date : </label>   
+            <input type="date" name="edate" /><br>
+            <br><label><b>Expense Amount : </label>   
+            <input type="double" placeholder="Amount" name="eamount" /><br>
+            <label><br><b>Expense Description: </label>   
+            <input type="text" placeholder="Enter Description" name="edesc" />
+             <label><b>Expense Type: </label>   
+            <input type="text" placeholder="Enter Type" name="etype" />
+            <button type="submit">Add</button> 
+            <a href = "ExpenseView"> <button type="button" class = newregistrationbtn>Back To Expense List</button></a>
+            
+           <h3 id="errorMessage"></h3>
+	
+
+	
+ 
+
+</div>
+	<script>
+		function validateExpense() {
+		var date = document.forms["addexpense-form"]["edate"].value;
+
+		var expenseamount = document.forms["addexpense-form"]["eamount"].value;
+
+		var expensedescription = document.forms["addexpense-form"]["edesc"].value;
+		
+		var expensetype = document.forms["addexpense-form"]["etype"].value;
+
+	
+		
+			if(date =="" ){
+
+				document.getElementById("errorMessage")
+
+				.innerHTML = "Please enter the details..!";
+
+				return false;
+
+			}else if(date ==""){
+
+				document.getElementById("errorMessage")
+
+				.innerHTML = "Please enter the date..!";
+
+				return false;
+
+			}else if(expenseamount==""){
+			
+				document.getElementById("errorMessage")
+
+				.innerHTML = "Please enter the Expense Amount..!";
+
+				return false;
+
+			}else if(expensedescription==""){
+			
+				document.getElementById("errorMessage")
+
+				.innerHTML = "Please enter the Expense Description..!";
+
+				return false;
+			}else if(expensetype==""){
+			
+				document.getElementById("errorMessage")
+
+				.innerHTML = "Please enter the Expense Type..!";
+
+				return false;
+			}else
+
+				return true;
+
+	}
+	
+	
+	</script>
+
+</form>
+<div class="footer">
+  <p>©Deloitte,All Rights Reserved</p>
+</div>
+
+</body>
+</html>

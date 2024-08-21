@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>LOGIN FROM</title>
+	 <link rel = "stylesheet" type = "text/class" href = "css\style.css">
+		<script src = "javascript/action.js"></script>
+<style>
+	.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  
+  color: black;
+  text-align: center;
+}
+	Body{
+		font-family: 'Tangerine', serif;
+        font-size: 12px;
+        background-color: white;
+	}
+	button{
+		background-color: blue;
+		width : 100%;
+		color: white;
+		padding : 15px;
+		margin : 10px 0px;
+		border-radius: 25px;
+		border: none;
+		
+	}
+	form {
+		border: 3px solid #f1f1f1;   
+	}
+	 input[type=text], input[type=password] {   
+        width: 100%;   
+        margin: 8px 0;  
+        padding: 12px 20px;   
+        display: inline-block;   
+        border: 2px ;   
+        box-sizing: border-box;
+        border-radius: 25px;
+    
+    }  
+
+  .newregistrationbtn {   
+        width: auto;   
+        padding: 10px 18px;  
+        margin: 10px 5px;  
+    }   
+        
+     
+ .container {   
+        padding: 25px;   
+        background-color: lightblue;
+        
+         
+    }   
+</style>
+</head>
+<body style="background-color:#2DCDDF;">
+<body>
+	<div id="header">
+
+	<center><h1>Expense Management System</style></h1></center>
+
+	</div>
+
+	<div style="text-align:center; height: 460px; width: 500px;
+
+	margin-left: auto; margin-right: auto; color: black;">
+	 <center> <h1> Login Form </h1> </center>   
+    <form action = "Login_Servlet" method = "post" name="login-form" onsubmit="return onLogin()">  
+        <div class="container">   
+            <label>Username : </label>   
+            <input type="text" placeholder="Enter Username" name="uname" >  
+            <label>Password : </label>   
+            <input type="password" placeholder="Enter Password" name="upass" >  
+            <button type="submit">Login</button>  
+            <a href = "Registration_Page.html"> <button type="button" class = newregistrationbtn>New Registration</button></a>
+            <h3 id="errorMessage"></h3>
+            
+</div>
+</form>
+</div>
+
+<div class="footer">
+
+<center><h4>©Deloitte,All Rights Reserved</h4></center>
+
+ 
+
+</div>
+
+</body>
+</html>
